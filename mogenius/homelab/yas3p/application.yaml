@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: yas3p
+  namespace: argocd
+  labels:
+    managed-by: mogenius
+    mogenius-helm-repo-name: own
+spec:
+  revisionHistoryLimit: 1
+  destination:
+    name: in-cluster
+    namespace: radicale-test
+  syncPolicy:
+    automated:
+      prune: true
+      enabled: true
+      allowEmpty: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  project: k8s-platform
+  source:
+    repoURL: https://charts.derwitt.dev
+    targetRevision: 0.3.1
+    chart: yas3p
+    helm:
+      releaseName: yas3p
+      valuesObject: null
