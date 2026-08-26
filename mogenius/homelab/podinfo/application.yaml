@@ -26,4 +26,4 @@ spec:
     chart: podinfo
     helm:
       releaseName: podinfo
-      valuesObject: null
+      valuesObject: {}

@@ -26,4 +26,4 @@ spec:
     chart: radicale
     helm:
       releaseName: radicale-mogenius-test
-      valuesObject: null
+      valuesObject: {}
