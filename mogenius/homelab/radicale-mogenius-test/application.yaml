@@ -9,7 +9,7 @@ metadata:
 spec:
   revisionHistoryLimit: 1
   destination:
-    name: in-cluster
+    name: homelab
     namespace: radicale-test
   syncPolicy:
     automated:
